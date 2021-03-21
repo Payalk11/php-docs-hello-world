@@ -30,3 +30,10 @@ steps:
     azureSubscription: 'Azure Pass - Sponsorship (08e6148f-1eb7-4c29-a59e-df2aff7be8a1)'
     Action: 'Start Azure App Service'
     WebAppName: 'phpsite12'
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'Azure Pass - Sponsorship (08e6148f-1eb7-4c29-a59e-df2aff7be8a1)'
+    appType: 'webApp'
+    WebAppName: 'phpsite12'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
