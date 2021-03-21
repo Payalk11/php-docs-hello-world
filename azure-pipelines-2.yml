@@ -23,8 +23,7 @@ steps:
     php -version
   displayName: 'Use PHP version $(phpVersion)'
 
-- script: composer install --no-interaction --prefer-dist
-  displayName: 'composer install'
+
 
 - task: AzureAppServiceManage@0
   inputs:
